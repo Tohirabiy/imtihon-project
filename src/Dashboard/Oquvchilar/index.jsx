@@ -3,48 +3,9 @@ import { Breadcrumb, Space, Table, Tag, Modal, Select } from "antd";
 import { Link } from "react-router-dom";
 import "./style.scss";
 
-// const columns = [
-//   {
-//     title: "#",
-//     dataIndex: "number",
-//     key: "number",
-//   },
-//   {
-//     title: "F.I.Sh",
-//     dataIndex: "fish",
-//     key: "fish",
-//   },
-//   {
-//     title: "Telefon",
-//     dataIndex: "telefon",
-//     key: "telefon",
-//   },
-//   {
-//     title: "Kurs",
-//     dataIndex: "kurs",
-//     key: "kurs",
-//   },
-//   {
-//     title: "Ro'yxatdan o'tgan vaqt",
-//     dataIndex: "register",
-//     key: "register",
-//   },
-//   {
-//     title: "Holat",
-//     dataIndex: "holat",
-//     key: "x",
-//     render: () => <a>Active</a>,
-//   },
-//   {
-//     title: "Tahrirlash",
-//     dataIndex: "",
-//     key: "x",
-//     render: () => <a onClick={showModal}>Edit</a>,
-//   },
-// ];
 
 const handleChange = (value) => {
-  console.log(value); // { value: "lucy", key: "lucy", label: "Lucy (101)" }
+  console.log(value);
 };
 const data = [
   {

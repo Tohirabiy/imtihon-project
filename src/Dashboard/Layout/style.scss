@@ -3,7 +3,7 @@
 }
 
 .head {
-  background-color: rgba(75, 22, 189, 0.922);
+  background-color: rgba(255, 255, 255, 0.922);
   a {
     color: #fff;
     font-family: Rowdies-Bold;
@@ -33,7 +33,7 @@
   margin-top: 80px;
   gap: 30px;
 
-  background: rgba(74, 22, 189, 0.8) 100%;
+  background: rgb(255, 255, 255) 100%;
   .sidebar {
   
     padding: 40px 2px;
@@ -52,7 +52,7 @@
           display: flex;
           align-items: center;
           gap: 20px;
-          background: rgb(247, 247, 247);
+          background: rgba(140, 185, 206, 0.671);
           height: 40px;
           width: 100%;
           padding: 4px 12px;
@@ -85,7 +85,7 @@
 }
 
 .active {
-  background: #000000ea !important;
+  background: #3e73b8ea !important;
   p {
     color: #fff !important;
   }
