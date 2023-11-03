@@ -9,13 +9,13 @@ const index = () => {
     <section id="wishes">
       <div className="container">
         <div className="wrapper">
-          <div className="all">
+          <div className="every">
             <div className="image">
               <img src={iphone} alt="" />
             </div>
 
-            <div className="texts">
-              <div className="h_text">
+            <div className="descs">
+              <div className="both_text">
                 <p className="first">The number one factor in</p> <br />
                 <p className="second">relevance drives out resistance.</p>
               </div>

@@ -1,13 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Table, Button, Space, Input, Modal, Form, Breadcrumb } from "antd";
 import { v4 as uuidv4 } from "uuid";
 import { Link } from "react-router-dom";
 import moment from "moment";
 import "./style.scss";
+import coursesApi from "./../../service/courses/index";
 
+const { TextArea } = Input;
 
 const index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    coursesApi
+      .getAll()
+      .then((res) => {
+        console.log(res.data);
+        setCourses(res.data.courses);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  const data = courses.map((item) => {
+    const data = {
+      id: item._id,
+      name: item.title,
+      count: item.students.length,
+      time: item.createdAt,
+    };
+    return data;
+  });
+
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -17,68 +43,11 @@ const index = () => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
-  const [data, setData] = useState([]);
   const [order, setOrder] = useState("");
   const [about, setAbout] = useState("");
   const [name, setName] = useState("");
-
-  const [fileLink, setfileLink] = useState("")
-  const [editingRecord, setEditingRecord] = useState(null);
+  const [imageLink, setimageLink] = useState("");
   const [editModalVisible, setEditModalVisible] = useState(false);
-
-  const handleAdd = () => {
-    const newData = [
-      ...data,
-      {
-        order,
-        about,
-        name,
-        
-        fileLink,
-        time: moment().format("YYYY-MM-DD HH:mm:ss"),
-      },
-    ];
-    setData(newData);
-    setOrder("");
-    setAbout("");
-    setName("");
-    setfileLink("");
-  };
-
-  const handleEdit = (record) => {
-    setEditingRecord(record);
-    setOrder(record.order);
-    setAbout(record.about);
-    setName(record.name);
-    setfileLink(record.fileLink);
-    setEditModalVisible(true);
-  };
-
-  const handleSave = () => {
-    const updatedData = data.map((item) =>
-      item === editingRecord
-        ? {
-            ...item,
-            order,
-            about,
-            name,
-            fileLink,
-          }
-        : item
-    );
-    setData(updatedData);
-    setEditingRecord(null);
-    setOrder("");
-    setAbout("");
-    setName("");
-    setfileLink("");
-    setEditModalVisible(false);
-  };
-
-  const handleDelete = (record) => {
-    const newData = data.filter((item) => item !== record);
-    setData(newData);
-  };
 
   const columns = [
     {
@@ -88,8 +57,8 @@ const index = () => {
     },
     {
       title: "Kurs Id",
-      dataIndex: "",
-      key: "",
+      dataIndex: "id",
+      key: "id",
       render: (_, record) => <p>{uuidv4()} </p>,
     },
     {
@@ -99,8 +68,8 @@ const index = () => {
     },
     {
       title: "O'quvchilar soni",
-      dataIndex: "",
-      key: "",
+      dataIndex: "count",
+      key: "count",
     },
     {
       title: "Yaratilgan vaqti",
@@ -112,12 +81,12 @@ const index = () => {
       key: "action",
       render: (_, record) => (
         <Space>
-          <Button type="link" onClick={() => handleEdit(record)}>
-            Edit
-          </Button>
-          <Button type="link" onClick={() => handleDelete(record)}>
-            Delete
-          </Button>
+          <div className="edit">
+            <Button type="link" onClick={() => showModal()}>
+              Edit
+            </Button>
+          </div>
+   
         </Space>
       ),
     },
@@ -125,7 +94,7 @@ const index = () => {
 
   return (
     <div className="courses">
-      <div className="main__up2">
+      <div className="kurses-head">
         <Breadcrumb
           items={[
             {
@@ -144,17 +113,19 @@ const index = () => {
             },
           ]}
         />
-        <button onClick={showModal}>
-          <i className="bx bx-plus-circle text-[32px] text-[#287c36] hover:text-[#4dff6b]"></i>
+        <button className="border flex items-center p-1 bg-[#1853a0] rounded" onClick={showModal}>
+          <i className="bx bx-plus-circle text-[32px] text-[#bbd6dd] hover:text-[#4ddbff]"></i>
         </button>
       </div>
 
-      <Table
-        columns={columns}
-        dataSource={data}
-        pagination={false}
-        rowKey={(record) => record.about}
-      />
+      <div className="table">
+        <Table
+          columns={columns}
+          dataSource={data}
+          pagination={false}
+          rowKey={(record) => record.about}
+        />
+      </div>
       <Modal
         title="Tahrirlash"
         visible={editModalVisible}
@@ -170,25 +141,17 @@ const index = () => {
           <Form.Item label="Kurs nomi">
             <Input value={name} onChange={(e) => setName(e.target.value)} />
           </Form.Item>
-     
-
-          <Form.Item label="Fayl yuklang">
+          <Form.Item label="Rasm linki">
             <Input
-              type="file"
-              value={fileLink}
-              onChange={(e) => setfileLink(e.target.value)}
+              value={imageLink}
+              onChange={(e) => setimageLink(e.target.value)}
             />
           </Form.Item>
-
-          <button
-            className="px-4 py-1 rounded-[15px] border-[1px] border-[#00000034]"
-            onClick={() => handleSave()}
-          >
+          <button className="px-4 py-1 rounded-[15px] border-[1px] border-[#00000034]">
             O'zgartirish
           </button>
         </Form>
       </Modal>
-
       <Modal
         title="Basic Modal"
         open={isModalOpen}
@@ -198,6 +161,7 @@ const index = () => {
         <Space direction="vertical" style={{ marginBottom: 16, width: "100%" }}>
           <Input
             placeholder="Tartib raqami"
+            type="number"
             value={order}
             onChange={(e) => setOrder(e.target.value)}
           />
@@ -207,19 +171,18 @@ const index = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <Input
-            placeholder="Kurs haqida"
+          <TextArea
+            rows={4}
             value={about}
+            placeholder="Kurs haqida"
             onChange={(e) => setAbout(e.target.value)}
           />
-       
-
           <Input
-          
-          placeholder="File yuklang"
-          value={fileLink}
-          onChange={(e) => setfileLink(e.target.value)}/>
-          <Button onClick={handleAdd}>Add</Button>
+            placeholder="Rasm linki"
+            value={imageLink}
+            onChange={(e) => setimageLink(e.target.value)}
+          />
+          <Button>Qoshish</Button>
         </Space>
       </Modal>
     </div>

@@ -17,11 +17,11 @@ const Header = () => {
         <div className="intro__wrapper">
           <div className="container">
             <div className="box flex items-start justify-between">
-              <div className="box-left">
-                <p className="sm-title">Successful coaches are visionaries</p>
+              <div className="left">
+                <p className="intro-title">Successful coaches are visionaries</p>
                 <h1>
                   Good <span>coaching</span> is good teaching & nothing else.
-                  InshaaAlloh
+                  InShaaAlloh
                 </h1>
                 <button>Coureses</button>
                 <div>
@@ -37,8 +37,8 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-              <div className="box-right">
-                <div className="box-img">
+              <div className="right">
+                <div className="right-img">
                   <div>
                     <img src={hacker} alt="hackerImg" />
                   </div>
@@ -56,7 +56,7 @@ const Header = () => {
       </section>
       <section id="intro-child">
         <div className="container">
-          <div className="box-child">
+          <div className="box_logo">
             <img src={amazon} alt="logo" />
             <img src={amd} alt="logo" />
             <img src={megabox} alt="logo" />

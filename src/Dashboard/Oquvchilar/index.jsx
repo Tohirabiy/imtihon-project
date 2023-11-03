@@ -1,56 +1,26 @@
-import React, { useState } from "react";
-import { Breadcrumb, Space, Table, Tag, Modal, Select } from "antd";
+import React, { useState, useEffect } from "react";
+import { Breadcrumb, Table, Modal, Select } from "antd";
 import { Link } from "react-router-dom";
 import "./style.scss";
-
-
-const handleChange = (value) => {
-  console.log(value);
-};
-const data = [
-  {
-    key: 1,
-    number: 1,
-    fish: "Thomas Müller",
-    telefon: "+9989999999",
-    kurs: "Bootcamp Foundation",
-    register: "01.11.2023",
-  },
-  {
-    key: 2,
-    number: 2,
-    fish: "Thibaut Courtois",
-    telefon: "+998888888888",
-    kurs: "Bootcamp Full Stack",
-    register: "01.11.2023",
-  },
-  {
-    key: 3,
-    number: 3,
-    fish: "Cristiano Ronaldo",
-    telefon: "+998777777777",
-    kurs: "React Standart",
-    register: "01.11.2023",
-  },
-  {
-    key: 4,
-    number: 4,
-    fish: "Tohir Abiy",
-    telefon: "+998993086639",
-    kurs: "Stand Up Show",
-    register: "17.04.2023",
-  },
-  {
-    key: 5,
-    number: 5,
-    fish: "Abdunazarov Abdunazar",
-    telefon: "+998993086639",
-    kurs: "Bootcamp Frontend Online",
-    register: "17.04.2023",
-  },
-];
+import studentApi from "../../service/students";
 
 const index = () => {
+  const [studentData, setstudentData] = useState([])
+  const handleChange = (value) => {
+    console.log(value);
+  };
+
+  const data = studentData.map((item) => {
+    const data = {
+      fish: item.fullName,
+      telefon: item.phoneNumber,
+      kurs: item.courseId.title,
+      register: item.createdAt,
+    }
+    return data
+  })
+
+
   const columns = [
     {
       title: "#",
@@ -101,9 +71,19 @@ const index = () => {
     setIsModalOpen(false);
   };
 
+  useEffect(() => {
+    studentApi.getAllStudent().then((res) => {
+      console.log(res.data);
+      setstudentData(res.data.students);
+    }).catch((err) => {
+      console.log(err);
+    })
+  }, [])
+
+
   return (
-    <div className="std">
-      <div className="main__up">
+    <div className="student">
+      <div className="student_overview">
         <Breadcrumb
           items={[
             {

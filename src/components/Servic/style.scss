@@ -7,18 +7,18 @@
   height: fit-content;
 
   .container {
-    .all {
+    .service_thing {
       width: 100%;
     }
 
-    .engtepa {
+    .top-ser {
       width: 100%;
 
-      .tepatexts {
+      .top-text {
         margin-top: 20px;
         text-align: center;
 
-        .services_title {
+        .h_one {
           font-family: Rowdies-Bold;
           font-weight: 700px;
           font-size: 48px;
@@ -26,7 +26,7 @@
           color: #2aaa94;
         }
 
-        .service_title {
+        .p_one {
           color: #4e596b;
           text-align: center;
           font-family: Inter-Medium;
@@ -44,7 +44,8 @@
     }
 
     .service_cards {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       margin-top: 30px;
       // justify-content: space-between;
       gap: 65px;
@@ -217,22 +218,22 @@
     height: fit-content;
 
     .container {
-      .engtepa {
+      .top-ser {
         width: 100%;
 
         .ellipse {
           transform: scale(0.7);
         }
 
-        .tepatexts {
+        .top-text {
           text-align: center;
 
-          .services_title {
+          .h_one {
             font-size: 32px;
             margin-bottom: 10px;
           }
 
-          .service_title {
+          .p_one {
             font-size: 20px;
           }
         }
@@ -333,21 +334,21 @@
 //     // Styles for tablet devices (769px to 1200px)
 //     .container
 //     {
-//         .engtepa
+//         .top-ser
 //         {
 //             width: 100%;
 
-//             .tepatexts
+//             .top-text
 //             {
 //                 text-align: center;
 
-//                 .services_title
+//                 .h_one
 //                 {
 //                     font-size: 32px;
 //                     margin-bottom: 10px;
 //                 }
 
-//                 .service_title
+//                 .p_one
 //                 {
 //                     font-size: 20px;
 //                 }
@@ -468,7 +469,7 @@
     height: fit-content;
 
     .container {
-      .engtepa {
+      .top-ser {
         width: 100%;
 
         .ellipse {
@@ -477,15 +478,15 @@
           transform: scale(0.4);
         }
 
-        .tepatexts {
+        .top-text {
           text-align: center;
 
-          .services_title {
+          .h_one {
             font-size: 15px;
             margin-bottom: 10px;
           }
 
-          .service_title {
+          .p_one {
             font-size: 14px;
           }
         }

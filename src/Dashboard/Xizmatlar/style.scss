@@ -1,3 +1,14 @@
-.xizmat{
-    color:#000;
+.main {
+    padding: 20px 0;
+    &__up {
+        background: #ffffff;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 0 15px;
+    }
+
+    & .table {
+        padding: 20px 15px;
+        width: 100%;
+    }
 }

@@ -1,34 +1,70 @@
 import { useState } from "react";
 import "./style.scss";
-import { Modal } from "antd";
+import { Modal, Input, Form } from "antd";
+import React from "react";
+const 
 
-const Card = ({ state: { title, image, description } }) => {
-   const [isModalOpen, setIsModalOpen] = useState(false);
-   const showModal = () => {
-     setIsModalOpen(true);
-   };
-   const handleOk = () => {
-     setIsModalOpen(false);
-   };
-   const handleCancel = () => {
-     setIsModalOpen(false);
-   };
+Card = ({ state: { title, image, description } }) => {
+
+  const { TextArea } = Input;
+  const [isModalOpen, setIsModalOpen] = useState(false);
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
+    const handleOk = () => {
+        setIsModalOpen(false);
+    };
+    const handleCancel = () => {
+        setIsModalOpen(false);
+    };
+
+    const MyFormItemContext = React.createContext([]);
+    function toArr(str) {
+      return Array.isArray(str) ? str : [str];
+  }
+  const MyFormItemGroup = ({ prefix, children }) => {
+      const prefixPath = React.useContext(MyFormItemContext);
+      const concatPath = React.useMemo(() => [...prefixPath, ...toArr(prefix)], [prefixPath, prefix]);
+      return <MyFormItemContext.Provider value={concatPath}>{children}</MyFormItemContext.Provider>;
+  };
+  const MyFormItem = ({ name, ...props }) => {
+      const prefixPath = React.useContext(MyFormItemContext);
+      const concatName = name !== undefined ? [...prefixPath, ...toArr(name)] : undefined;
+      return <Form.Item name={concatName} {...props} />;
+  };
+
+  const onChange = (value) => {
+    
+  };
+  const onSearch = (value) => {
+ 
+  };
+
+  const filterOption = (input, option) =>
+      (option?.label ?? '').toLowerCase().includes(input.toLowerCase());
+
+
+      const onFinish = (value) => {
+        console.log(value);
+    }
   return (
     <div className="card">
-      <img
-        src={image}
-        alt="Image"
-        className=" rounded-t-[20px] object-contain w-full"
-      />
+      <div className="card_head border-b-2"  >
+        <img
+          src={image}
+          alt="Image"
+          className=" rounded-t-[20px] object-contain w-full"
+        />
+      </div>
 
-      <div className="about__card">
-        <div className="title__card--about">
+      <div className="card_desc">
+        <div className="t_card_about">
           <p>5,957 Students</p>
           <p>01h 49m</p>
         </div>
         <h1>{description.split(" ").slice(0, 2).join(" ")}</h1>
 
-        <div className="card__price">
+        <div className="c_price">
           <p>$1999.99</p>
           <button onClick={() => showModal()}>
             <svg
@@ -54,16 +90,23 @@ const Card = ({ state: { title, image, description } }) => {
           </button>
         </div>
       </div>
-      <Modal
-        title="Basic Modal"
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-      >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-      </Modal>
+      <Modal open={isModalOpen} cancelText="Bekor qilish" onCancel={handleCancel} onOk={handleOk} okText="Jo'natish">
+                <div className='modal_top'>
+                    <span>Kurslar</span>
+                </div>
+                <Form name="form_item_path" layout="vertical" onFinish={onFinish}>
+                    <MyFormItemGroup prefix={['user']}>
+                        <MyFormItemGroup prefix={['name']}>
+                            <MyFormItem name="firstName" label="Ism familiya sharif">
+                                <Input placeholder='F.I.SH' required />
+                            </MyFormItem>
+                            <MyFormItem name="pnone_number" label="Telefon Raqam">
+                                <Input placeholder='90 000 00 00' />
+                            </MyFormItem>
+                        </MyFormItemGroup>
+                    </MyFormItemGroup>
+                </Form>
+            </Modal>
     </div>
   );
 };

@@ -3,7 +3,7 @@
   .wrapper {
     margin-top: 87px;
 
-    .all {
+    .every {
       margin-left: 140px;
       display: flex;
       gap: 14px;
@@ -11,12 +11,12 @@
         width: 400px;
         height: 756px;
       }
-      .texts {
+      .descs {
         margin-top: 130px;
         margin-left: 46px;
         display: flex;
         flex-direction: column;
-        .h_text {
+        .both_text {
           margin-bottom: 52px;
           .first {
             color: #1d1d45;
@@ -72,14 +72,14 @@
 @media (max-width: 1200px) {
   #wishes {
     .wrapper {
-      .all {
+      .every {
         .image {
           width: 100%;
           height: auto;
         }
-        .texts {
+        .descs {
           margin-top: 120px;
-          .h_text {
+          .both_text {
             .first,
             .second {
               font-size: 45px;
@@ -106,14 +106,14 @@
 @media (max-width: 1100px) {
   #wishes {
     .wrapper {
-      .all {
+      .every {
         .image {
           width: 100%;
           height: auto;
         }
-        .texts {
+        .descs {
           margin-top: 100px;
-          .h_text {
+          .both_text {
             .first,
             .second {
               font-size: 43px;
@@ -140,14 +140,14 @@
 @media (max-width: 1050px) {
   #wishes {
     .wrapper {
-      .all {
+      .every {
         .image {
           width: 100%;
           height: auto;
         }
-        .texts {
+        .descs {
           margin-top: 80px;
-          .h_text {
+          .both_text {
             .first,
             .second {
               font-size: 40px;
@@ -174,14 +174,14 @@
 @media (max-width: 1000px) {
   #wishes {
     .wrapper {
-      .all {
+      .every {
         .image {
           width: 100%;
           height: auto;
         }
-        .texts {
+        .descs {
           margin-top: 70px;
-          .h_text {
+          .both_text {
             .first,
             .second {
               font-size: 38px;
@@ -208,14 +208,14 @@
 @media (max-width: 970px) {
   #wishes {
     .wrapper {
-      .all {
+      .every {
         .image {
           width: 100%;
           height: auto;
         }
-        .texts {
+        .descs {
           margin-top: 70px;
-          .h_text {
+          .both_text {
             .first,
             .second {
               font-size: 36px;
@@ -242,14 +242,14 @@
 @media (max-width: 940px) {
   #wishes {
     .wrapper {
-      .all {
+      .every {
         .image {
           width: 100%;
           height: auto;
         }
-        .texts {
+        .descs {
           margin-top: 60px;
-          .h_text {
+          .both_text {
             .first,
             .second {
               font-size: 34px;
@@ -276,14 +276,14 @@
 @media (max-width: 900px) {
   #wishes {
     .wrapper {
-      .all {
+      .every {
         .image {
           width: 100%;
           height: auto;
         }
-        .texts {
+        .descs {
           margin-top: 40px;
-          .h_text {
+          .both_text {
             .first,
             .second {
               font-size: 30px;
@@ -310,14 +310,14 @@
 @media (max-width: 850px) {
   #wishes {
     .wrapper {
-      .all {
+      .every {
         .image {
           width: 100%;
           height: auto;
         }
-        .texts {
+        .descs {
           margin-top: 40px;
-          .h_text {
+          .both_text {
             .first,
             .second {
               font-size: 28px;
@@ -344,14 +344,14 @@
 @media (max-width: 800px) {
   #wishes {
     .wrapper {
-      .all {
+      .every {
         .image {
           width: 100%;
           height: auto;
         }
-        .texts {
+        .descs {
           margin-top: 35px;
-          .h_text {
+          .both_text {
             .first,
             .second {
               font-size: 24px;
@@ -379,14 +379,14 @@
 @media (max-width: 768px) {
   #wishes {
     .wrapper {
-      .all {
+      .every {
         .image {
           width: 100%;
           height: auto;
           margin-top: 60px;
         }
-        .texts {
-          .h_text {
+        .descs {
+          .both_text {
             margin-top: 50px;
             .first,
             .second {
@@ -420,7 +420,7 @@
     .wrapper {
       margin-top: 20px;
 
-      .all {
+      .every {
         margin-left: 20px;
         display: flex;
         flex-direction: column;
@@ -429,10 +429,10 @@
           width: 100%;
           height: auto;
         }
-        .texts {
+        .descs {
           margin-top: 20px;
           margin-left: 20px;
-          .h_text {
+          .both_text {
             margin-bottom: 20px;
             .first,
             .second {
@@ -463,7 +463,7 @@
     .wrapper {
       margin-top: 20px;
 
-      .all {
+      .every {
         margin-left: 20px;
         display: flex;
         flex-direction: column;
@@ -472,10 +472,10 @@
           width: 100%;
           height: auto;
         }
-        .texts {
+        .descs {
           margin-top: 20px;
           margin-left: 0;
-          .h_text {
+          .both_text {
             margin-bottom: 20px;
             .first,
             .second {

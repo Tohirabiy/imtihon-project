@@ -13,8 +13,8 @@
       justify-content: space-between;
       align-items: start;
       flex-wrap: nowrap !important;
-      .box-left {
-        .sm-title {
+      .left {
+        .intro-title {
           color: rgba(255, 255, 255, 0.8);
           font-size: 18px;
           font-weight: 600;
@@ -88,9 +88,9 @@
           }
         }
       }
-      .box-right {
+      .right {
         width: 100%;
-        .box-img {
+        .right-img {
           position: relative;
           display: flex;
           align-items: start;
@@ -115,7 +115,7 @@
   background: linear-gradient(180deg, #084fc7 0%, rgba(8, 79, 199, 0) 172.16%);
 
   .container {
-    .box-child {
+    .box_logo {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
@@ -133,7 +133,7 @@
       .container {
         .box {
           display: flex;
-          .box-left {
+          .left {
             text-align: center;
             margin-top: 20px;
             padding-bottom: 20px;
@@ -141,11 +141,11 @@
               margin: 0 auto;
             }
           }
-          .box-right {
+          .right {
             width: 100%;
             display: flex;
             justify-content: center;
-            .box-img {
+            .right-img {
               margin-left: 50px;
               div {
                 &:nth-child(3) {
@@ -168,7 +168,7 @@
   }
   #intro_child {
     .container {
-      .box-child {
+      .box_logo {
         flex-wrap: wrap;
         gap: 20px;
       }
@@ -186,7 +186,7 @@
           display: flex;
           flex-wrap: wrap;
           flex-direction: column-reverse;
-          .box-left {
+          .left {
             text-align: center;
             margin-top: 20px;
             padding-bottom: 20px;
@@ -194,11 +194,11 @@
               margin: 0 auto;
             }
           }
-          .box-right {
+          .right {
             width: 100%;
             display: flex;
             justify-content: center;
-            .box-img {
+            .right-img {
               margin-left: 50px;
               div {
                 &:nth-child(3) {
@@ -213,7 +213,7 @@
   }
   #intro_child {
     .container {
-      .box-child {
+      .box_logo {
         flex-wrap: wrap;
         gap: 20px;
       }
@@ -227,8 +227,8 @@
     .intro__wrapper {
       .container {
         .box {
-          .box-right {
-            .box-img {
+          .right {
+            .right-img {
               div {
                 &:nth-child(3) {
                   img {
@@ -251,7 +251,7 @@
   }
   #intro-child {
     .container {
-      .box-child {
+      .box_logo {
         display: flex;
         align-items: center !important;
         flex-wrap: wrap;
@@ -267,8 +267,8 @@
     .intro__wrapper {
       .container {
         .box {
-          .box-right {
-            .box-img {
+          .right {
+            .right-img {
               div {
                 &:nth-child(2) {
                   left: -23%;
@@ -291,8 +291,8 @@
     .intro__wrapper {
       .container {
         .box {
-          .box-right {
-            .box-img {
+          .right {
+            .right-img {
               div {
                 &:nth-child(2) {
                   left: -18%;
@@ -317,7 +317,7 @@
       .box {
         display: flex;
         flex-direction: column-reverse;
-        .box-left {
+        .left {
           text-align: center;
           margin-top: 50px;
           h1 {
@@ -330,11 +330,11 @@
             }
           }
         }
-        .box-right {
+        .right {
           width: 100%;
           margin-left: 0 !important;
           padding-top: 100px;
-          .box-img {
+          .right-img {
             position: relative;
             display: flex;
             justify-content: center;
@@ -368,7 +368,7 @@
   }
   #intro-child {
     .container {
-      .box-child {
+      .box_logo {
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
@@ -385,7 +385,7 @@
     .intro__wrapper {
       .container {
         .box {
-          .box-left {
+          .left {
             h1 {
               line-height: 70px;
             }
@@ -395,8 +395,8 @@
               padding: 15px;
             }
           }
-          .box-right {
-            .box-img {
+          .right {
+            .right-img {
               div {
                 &:nth-child(2) {
                   position: absolute;
@@ -422,15 +422,15 @@
     .intro__wrapper {
       .container {
         .box {
-          .box-left {
+          .left {
             h1 {
               font-size: 45px;
               line-height: 60px;
             }
           }
-          .box-right {
+          .right {
             padding-top: 70px;
-            .box-img {
+            .right-img {
               div {
                 img {
                   width: 650px !important;
@@ -460,15 +460,15 @@
     .intro__wrapper {
       .container {
         .box {
-          .box-left {
+          .left {
             h1 {
               font-size: 40px !important;
               line-height: 45px !important;
             }
           }
-          .box-right {
+          .right {
             padding-top: 40px;
-            .box-img {
+            .right-img {
               margin-left: 50px;
               div {
                 &:nth-child(3) {

@@ -18,18 +18,18 @@ const index = () => {
   }, []);
 
   return (
-    <section id="course" className="course">
+    <section id="course" className="courses">
       <div className="container">
-        <div className="course__wrapper">
-          <h1 className="cousrce__title">
+        <div className="c_wrapper">
+          <h1 className="c_title">
             Featured <span>Course</span>
           </h1>
-          <p className="course__about">
+          <p className="c_about">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed <br />{" "}
             do eiusmod temporidunt ut labore veniam...
           </p>
 
-          <div className="course__cards">
+          <div className="c_cards">
             {course.map((e) => {
               return <Card key={e._id} state={e} />;
             })}

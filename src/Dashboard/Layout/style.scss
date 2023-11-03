@@ -48,7 +48,7 @@
       gap: 10px;
 
       li {
-        .nav__link {
+        .linked {
           display: flex;
           align-items: center;
           gap: 20px;
@@ -60,7 +60,7 @@
           cursor: pointer;
           transition: all 0.2s ease-in-out;
           p {
-            color: #000000;
+            color:#0332cc;
             font-family: Saira-Medium;
             font-size: 20px;
             font-style: normal;
@@ -116,4 +116,15 @@
   &:hover {
     color: #ffffff83 !important;
   }
+}
+.ant-space-item{
+  color: #4968cc;
+  // align-items: center;
+  font-size: 16px;
+}
+
+
+.bx-menu{
+  color: #4968cc;
+
 }

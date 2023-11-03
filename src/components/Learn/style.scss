@@ -1,4 +1,4 @@
-.learnsection {
+.just-learn {
   background: linear-gradient(
     72deg,
     rgba(8, 79, 199, 0.9) 26.49%,
@@ -24,7 +24,7 @@
       top: 103px;
       left: -151px;
     }
-    .learnsection-wrapper-h2 {
+    .just-learn-wrapper-h2 {
       text-align: center;
       color: #fff;
       font-family: Rowdies-Bold;
@@ -37,7 +37,7 @@
         color: #4be5ca;
       }
     }
-    .learnsection-wrapper-p {
+    .just-learn-wrapper-p {
       max-width: 728px;
       width: 100%;
       margin: 0 auto;
@@ -47,7 +47,7 @@
       font-size: 25px;
       line-height: 35px;
     }
-    .learncardswrapper {
+    .that_card_wrapper {
       max-width: 1367px;
       width: 100%;
       max-height: 248px;
@@ -56,13 +56,13 @@
       margin: 115px auto;
       display: flex;
       align-items: center;
-      .learnCardOne {
+      .first-card {
         width: 331px;
         height: 245px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        .learnCardOne-h3 {
+        .first-card-h3 {
           color: #fff;
           text-align: center;
           font-family: Rowdies-Bold;
@@ -71,7 +71,7 @@
           margin-top: 36px;
           margin-bottom: 29px;
         }
-        .learnCardOne-p {
+        .first-card-p {
           color: #fff;
           text-align: center;
           font-family: Saira-Regular;
@@ -80,7 +80,7 @@
           display: flex;
         }
       }
-      .learnCardTwo {
+      .second-card {
         width: 517px;
         height: 245px;
         padding: 0 93px;
@@ -96,7 +96,7 @@
             rgba(255, 255, 255, 0)
           )
           1 100%;
-        .learnCardTwo-h3 {
+        .second-card-h3 {
           color: #fff;
           text-align: center;
           font-family: Rowdies-Bold;
@@ -105,7 +105,7 @@
           margin-top: 36px;
           margin-bottom: 29px;
         }
-        .learnCardTwo-p {
+        .second-card-p {
           color: #fff;
           text-align: center;
           font-family: Saira-Regular;
@@ -114,13 +114,13 @@
           display: flex;
         }
       }
-      .learnCardThree {
+      .third-card {
         width: 331px;
         height: 245px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        .learnCardThree-h3 {
+        .third-card-h3 {
           color: #fff;
           text-align: center;
           font-family: Rowdies-Bold;
@@ -129,7 +129,7 @@
           margin-top: 36px;
           margin-bottom: 29px;
         }
-        .learnCardThree-p {
+        .third-card-p {
           color: #fff;
           text-align: center;
           font-family: Saira-Regular;
@@ -142,7 +142,7 @@
   }
 }
 @media only screen and (max-width: 1430px) {
-  .learnsection {
+  .just-learn {
     padding-top: 100px;
     &-wrapper {
       .learnBlur {
@@ -155,18 +155,17 @@
         height: 230px;
         top: 95px;
       }
-      .learnsection-wrapper-h2 {
+      .just-learn-wrapper-h2 {
         font-size: 43px;
         line-height: 48px;
         margin-bottom: 27px;
-        .h2-span {
-        }
+       
       }
-      .learnsection-wrapper-p {
+      .just-learn-wrapper-p {
         font-size: 24px;
         line-height: 33px;
       }
-      .learncardswrapper {
+      .that_card_wrapper {
         max-width: 1367px;
         width: 100%;
         max-height: 248px;
@@ -175,13 +174,13 @@
         margin: 115px auto;
         display: flex;
         align-items: center;
-        .learnCardOne {
+        .first-card {
           width: 331px;
           height: 245px;
           display: flex;
           flex-direction: column;
           align-items: center;
-          .learnCardOne-h3 {
+          .first-card-h3 {
             color: #fff;
             text-align: center;
             font-family: Rowdies-Bold;
@@ -190,7 +189,7 @@
             margin-top: 36px;
             margin-bottom: 29px;
           }
-          .learnCardOne-p {
+          .first-card-p {
             color: #fff;
             text-align: center;
             font-family: Saira-Regular;
@@ -199,7 +198,7 @@
             display: flex;
           }
         }
-        .learnCardTwo {
+        .second-card {
           width: 517px;
           height: 245px;
           padding: 0 93px;
@@ -215,7 +214,7 @@
               rgba(255, 255, 255, 0)
             )
             1 100%;
-          .learnCardTwo-h3 {
+          .second-card-h3 {
             color: #fff;
             text-align: center;
             font-family: Rowdies-Bold;
@@ -224,7 +223,7 @@
             margin-top: 36px;
             margin-bottom: 29px;
           }
-          .learnCardTwo-p {
+          .second-card-p {
             color: #fff;
             text-align: center;
             font-family: Saira-Regular;
@@ -233,13 +232,13 @@
             display: flex;
           }
         }
-        .learnCardThree {
+        .third-card {
           width: 331px;
           height: 245px;
           display: flex;
           flex-direction: column;
           align-items: center;
-          .learnCardThree-h3 {
+          .third-card-h3 {
             color: #fff;
             text-align: center;
             font-family: Rowdies-Bold;
@@ -248,7 +247,7 @@
             margin-top: 36px;
             margin-bottom: 29px;
           }
-          .learnCardThree-p {
+          .third-card-p {
             color: #fff;
             text-align: center;
             font-family: Saira-Regular;
@@ -262,7 +261,7 @@
   }
 }
 @media only screen and (max-width: 973px) {
-  .learnsection {
+  .just-learn {
     padding-top: 80px;
     &-wrapper {
       .learnBlur {
@@ -275,52 +274,52 @@
         height: 210px;
         top: 85px;
       }
-      .learnsection-wrapper-h2 {
+      .just-learn-wrapper-h2 {
         font-size: 39px;
         margin-bottom: 26px;
         .h2-span {
         }
       }
-      .learnsection-wrapper-p {
+      .just-learn-wrapper-p {
         font-size: 22px;
         line-height: 33px;
       }
-      .learncardswrapper {
+      .that_card_wrapper {
         margin: 100px auto;
         display: flex;
         align-items: center;
-        .learnCardOne {
-          .learnCardOne-h3 {
+        .first-card {
+          .first-card-h3 {
             font-size: 22px;
             margin-top: 33px;
             margin-bottom: 26px;
           }
-          .learnCardOne-p {
+          .first-card-p {
             font-size: 16px;
             line-height: 25px;
           }
         }
-        .learnCardTwo {
+        .second-card {
           width: 490px;
           padding: 0 74px;
           margin: 0 74px;
-          .learnCardTwo-h3 {
+          .second-card-h3 {
             font-size: 22px;
             margin-top: 33px;
             margin-bottom: 26px;
           }
-          .learnCardTwo-p {
+          .second-card-p {
             font-size: 16px;
             line-height: 25px;
           }
         }
-        .learnCardThree {
-          .learnCardThree-h3 {
+        .third-card {
+          .third-card-h3 {
             font-size: 22px;
             margin-top: 33px;
             margin-bottom: 26px;
           }
-          .learnCardThree-p {
+          .third-card-p {
             font-size: 16px;
             line-height: 25px;
           }
@@ -330,7 +329,7 @@
   }
 }
 @media only screen and (max-width: 810px) {
-  .learnsection {
+  .just-learn {
     padding-top: 75px;
     min-height: 689px;
     &-wrapper {
@@ -344,50 +343,50 @@
         height: 190px;
         top: 75px;
       }
-      .learnsection-wrapper-h2 {
+      .just-learn-wrapper-h2 {
         font-size: 36px;
         margin-bottom: 25px;
         .h2-span {
         }
       }
-      .learnsection-wrapper-p {
+      .just-learn-wrapper-p {
         font-size: 20px;
         line-height: 31px;
       }
-      .learncardswrapper {
+      .that_card_wrapper {
         margin: 90px auto;
-        .learnCardOne {
-          .learnCardOne-h3 {
+        .first-card {
+          .first-card-h3 {
             font-size: 20px;
             margin-top: 31px;
             margin-bottom: 25px;
           }
-          .learnCardOne-p {
+          .first-card-p {
             font-size: 14px;
             line-height: 25px;
           }
         }
-        .learnCardTwo {
+        .second-card {
           width: 440px;
           padding: 0 55px;
           margin: 0 55px;
-          .learnCardTwo-h3 {
+          .second-card-h3 {
             font-size: 20px;
             margin-top: 31px;
             margin-bottom: 25px;
           }
-          .learnCardTwo-p {
+          .second-card-p {
             font-size: 14px;
             line-height: 25px;
           }
         }
-        .learnCardThree {
-          .learnCardThree-h3 {
+        .third-card {
+          .third-card-h3 {
             font-size: 20px;
             margin-top: 31px;
             margin-bottom: 25px;
           }
-          .learnCardThree-p {
+          .third-card-p {
             font-size: 14px;
             line-height: 25px;
           }
@@ -397,7 +396,7 @@
   }
 }
 @media only screen and (max-width: 720px) {
-  .learnsection {
+  .just-learn {
     padding-top: 68px;
     min-height: 649px;
     &-wrapper {
@@ -411,50 +410,50 @@
         height: 190px;
         top: 55px;
       }
-      .learnsection-wrapper-h2 {
+      .just-learn-wrapper-h2 {
         font-size: 33px;
         margin-bottom: 24px;
         .h2-span {
         }
       }
-      .learnsection-wrapper-p {
+      .just-learn-wrapper-p {
         font-size: 18px;
         line-height: 30px;
       }
-      .learncardswrapper {
+      .that_card_wrapper {
         margin: 80px auto;
-        .learnCardOne {
-          .learnCardOne-h3 {
+        .first-card {
+          .first-card-h3 {
             font-size: 19px;
             margin-top: 28px;
             margin-bottom: 22px;
           }
-          .learnCardOne-p {
+          .first-card-p {
             font-size: 13px;
             line-height: 24px;
           }
         }
-        .learnCardTwo {
+        .second-card {
           width: 440px;
           padding: 0 55px;
           margin: 0 55px;
-          .learnCardTwo-h3 {
+          .second-card-h3 {
             font-size: 19px;
             margin-top: 28px;
             margin-bottom: 22px;
           }
-          .learnCardTwo-p {
+          .second-card-p {
             font-size: 13px;
             line-height: 24px;
           }
         }
-        .learnCardThree {
-          .learnCardThree-h3 {
+        .third-card {
+          .third-card-h3 {
             font-size: 19px;
             margin-top: 28px;
             margin-bottom: 22px;
           }
-          .learnCardThree-p {
+          .third-card-p {
             font-size: 13px;
             line-height: 24px;
           }
@@ -464,7 +463,7 @@
   }
 }
 @media only screen and (max-width: 663px) {
-  .learnsection {
+  .just-learn {
     padding-top: 68px;
     min-height: 1049px;
     &-wrapper {
@@ -478,38 +477,38 @@
         height: 190px;
         top: 55px;
       }
-      .learnsection-wrapper-h2 {
+      .just-learn-wrapper-h2 {
         font-size: 31px;
         margin-bottom: 23px;
         .h2-span {
         }
       }
-      .learnsection-wrapper-p {
+      .just-learn-wrapper-p {
         font-size: 17px;
         line-height: 30px;
       }
-      .learncardswrapper {
+      .that_card_wrapper {
         margin: 70px auto;
         flex-direction: column;
         row-gap: 20px;
-        .learnCardOne {
+        .first-card {
           background-color: #ffffff2b;
           border-radius: 12px;
           padding: 10px;
           max-width: 500px;
           width: 100%;
 
-          .learnCardOne-h3 {
+          .first-card-h3 {
             font-size: 18px;
             margin-top: 28px;
             margin-bottom: 22px;
           }
-          .learnCardOne-p {
+          .first-card-p {
             font-size: 13px;
             line-height: 24px;
           }
         }
-        .learnCardTwo {
+        .second-card {
           width: 440px;
           padding: 0 55px;
           margin: 0 55px;
@@ -520,28 +519,28 @@
           padding: 10px;
           max-width: 500px;
           width: 100%;
-          .learnCardTwo-h3 {
+          .second-card-h3 {
             font-size: 19px;
             margin-top: 28px;
             margin-bottom: 22px;
           }
-          .learnCardTwo-p {
+          .second-card-p {
             font-size: 13px;
             line-height: 24px;
           }
         }
-        .learnCardThree {
+        .third-card {
           background-color: #ffffff2b;
           border-radius: 12px;
           padding: 10px;
           max-width: 500px;
           width: 100%;
-          .learnCardThree-h3 {
+          .third-card-h3 {
             font-size: 19px;
             margin-top: 28px;
             margin-bottom: 22px;
           }
-          .learnCardThree-p {
+          .third-card-p {
             font-size: 13px;
             line-height: 24px;
           }
@@ -551,31 +550,31 @@
   }
 }
 @media only screen and (max-width: 522px) {
-  .learnsection {
+  .just-learn {
     padding-top: 58px;
     min-height: 1079px;
   }
 }
 @media only screen and (max-width: 477px) {
-  .learnsection {
+  .just-learn {
     padding-top: 58px;
     min-height: 1109px;
   }
 }
 @media only screen and (max-width: 384px) {
-  .learnsection {
+  .just-learn {
     padding-top: 58px;
     min-height: 1129px;
   }
 }
 @media only screen and (max-width: 376px) {
-  .learnsection {
+  .just-learn {
     padding-top: 58px;
     min-height: 1159px;
   }
 }
 @media only screen and (max-width: 320px) {
-  .learnsection {
+  .just-learn {
     padding-top: 58px;
     min-height: 1209px;
   }

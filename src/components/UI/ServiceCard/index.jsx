@@ -9,7 +9,7 @@ const ServicesCard = ({ state: { title, description, image, createdAt, users } }
   const showModal = () => {
     setIsModalOpen(true);
   };
-  const handleOk = () => {
+  const sayOk = () => {
     setIsModalOpen(false);
   };
   const handleCancel = () => {
@@ -42,10 +42,10 @@ const ServicesCard = ({ state: { title, description, image, createdAt, users } }
   };
 
   const onChange = (value) => {
-    // console.log(selected ${value});
+   
   };
   const onSearch = (value) => {
-    // console.log('search:', value);
+   
   };
 
   const filterOption = (input, option) =>
@@ -77,7 +77,7 @@ const ServicesCard = ({ state: { title, description, image, createdAt, users } }
           open={isModalOpen}
           cancelText="Bekor qilish"
           onCancel={handleCancel}
-          onOk={handleOk}
+          onOk={sayOk}
           okText="Jo'natish"
         >
           <div className="modal_top">
@@ -94,22 +94,23 @@ const ServicesCard = ({ state: { title, description, image, createdAt, users } }
                 </MyFormItem>
                 <MyFormItem name="type" label="Choose service">
                   <Select
+                       options={[
+                        {
+                          value: "service1",
+                          label: "Web sayt yaratish ",
+                        },
+                        {
+                          value: "service2",
+                          label: "Mobile dasturlash",
+                        },
+                      ]}
                     showSearch
                     placeholder="Select..."
                     optionFilterProp="children"
                     onChange={onChange}
                     onSearch={onSearch}
                     filterOption={filterOption}
-                    options={[
-                      {
-                        value: "service1",
-                        label: "Create web site",
-                      },
-                      {
-                        value: "service2",
-                        label: "Create mobile app",
-                      },
-                    ]}
+               
                   />
                 </MyFormItem>
               </MyFormItemGroup>

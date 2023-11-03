@@ -1,12 +1,9 @@
-.course {
+.courses {
   padding: 50px 0;
-  background: linear-gradient(
-    180deg,
-    #d9ecff 0%,
-    rgba(240, 243, 255, 0) 127.78%
-  );
-  .course__wrapper {
-    .cousrce__title {
+  background: linear-gradient(180deg, #d9ecff 0%, rgba(240, 243, 255, 0) 127.78%);
+  .c_wrapper {
+
+    .c_title {
       color: #323232;
       font-family: Rowdies-Bold;
       font-size: 45px;
@@ -20,7 +17,7 @@
       }
     }
 
-    .course__about {
+    .c_about {
       color: #4e596b;
       text-align: center;
       font-family: Saira-Regular;
@@ -32,9 +29,9 @@
       margin-bottom: 94px;
     }
 
-    .course__cards {
-      display: flex;
-      flex-wrap: wrap;
+    .c_cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       align-items: center;
       justify-content: center;
       gap: 46px;

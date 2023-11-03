@@ -21,11 +21,11 @@ const index = () => {
     <section id="services">
       <div className="container">
         <div className="all">
-          <div className="engtepa">
+          <div className="top-ser">
        
-            <div className="tepatexts">
-              <h1 className="services_title">Services</h1>
-              <p className="service_title">What our student say about us</p>
+            <div className="top-text">
+              <h1 className="h_one">Services</h1>
+              <p className="p_one">What our student say about us</p>
             </div>
           </div>
 
